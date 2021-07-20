@@ -1,6 +1,6 @@
 using System;
 
-namespace ListingsTrades.Data
+namespace ListingsTrades.Models
 {
     public class Classifications
     {
@@ -16,9 +16,9 @@ namespace ListingsTrades.Data
         public int FeeAccount { get; set; }
         public decimal TaxRate { get; set; }
         public int TaxAccount { get; set; }
-        public Boolean ChargeHOFees { get; set; }
-        public Boolean AllowFeeDiscounting { get; set; }
-        public Boolean ChargePST { get; set; }
+        public bool ChargeHOFees { get; set; }
+        public bool AllowFeeDiscounting { get; set; }
+        public bool ChargePST { get; set; }
         public decimal PSTRate { get; set; }
         public int CreditOffice { get; set; }
         public string ListStatus { get; set; }
@@ -26,10 +26,7 @@ namespace ListingsTrades.Data
         public int BrokerAccount_S { get; set; }
         public int AgentAccount_S { get; set; }
         public int RevenueAccount_S { get; set; }
-        public Boolean NotIn231 { get; set; }
+        public bool NotIn231 { get; set; }
         public DateTime InactiveDate { get; set; }
-
-
-
     }
 }

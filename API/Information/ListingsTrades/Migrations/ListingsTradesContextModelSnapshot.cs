@@ -4,12 +4,11 @@ using ListingsTrades.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ListingsTrades.Migrations
 {
-    [DbContext(typeof(ListingsTradesContext))]
-    partial class ListingsTradesContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(ApplicationDBContext))]
+    partial class ApplicationDBContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -19,7 +18,7 @@ namespace ListingsTrades.Migrations
                 .HasAnnotation("ProductVersion", "5.0.8")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("ListingsTrades.Data.Classifications", b =>
+            modelBuilder.Entity("ListingsTrades.Models.Classifications", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -99,7 +98,7 @@ namespace ListingsTrades.Migrations
                     b.ToTable("Classifications");
                 });
 
-            modelBuilder.Entity("ListingsTrades.Data.Conditions", b =>
+            modelBuilder.Entity("ListingsTrades.Models.Conditions", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -113,7 +112,7 @@ namespace ListingsTrades.Migrations
                     b.ToTable("Conditions");
                 });
 
-            modelBuilder.Entity("ListingsTrades.Data.PropertyTypes", b =>
+            modelBuilder.Entity("ListingsTrades.Models.PropertyTypes", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -142,7 +141,7 @@ namespace ListingsTrades.Migrations
                     b.ToTable("PropertyTypes");
                 });
 
-            modelBuilder.Entity("ListingsTrades.Data.SourceOfBusiness", b =>
+            modelBuilder.Entity("ListingsTrades.Models.SourceOfBusiness", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()

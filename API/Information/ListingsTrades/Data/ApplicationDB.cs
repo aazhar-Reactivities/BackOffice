@@ -1,10 +1,11 @@
+using ListingsTrades.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace ListingsTrades.Data
 {
-    public class ListingsTradesContext : DbContext
+    public class ApplicationDBContext : DbContext
     {
-        public ListingsTradesContext(DbContextOptions<ListingsTradesContext> options) : base(options)
+        public ApplicationDBContext(DbContextOptions<ApplicationDBContext> options) : base(options)
         {
             
         }

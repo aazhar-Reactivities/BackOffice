@@ -1,6 +1,6 @@
 using System;
 
-namespace ListingsTrades.Data
+namespace ListingsTrades.Models
 {
     public class Conditions
     {

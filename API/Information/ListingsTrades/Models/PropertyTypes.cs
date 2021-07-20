@@ -1,6 +1,6 @@
 using System;
 
-namespace ListingsTrades.Data
+namespace ListingsTrades.Models
 {
     public class PropertyTypes
     {
@@ -9,7 +9,7 @@ namespace ListingsTrades.Data
         public string Name { get; set; }
         public Boolean Type { get; set; }
         public string ShortName { get; set; }
-        public Boolean Report2HO { get; set; }
-        public Boolean RentalType { get; set; }  
+        public bool Report2HO { get; set; }
+        public bool RentalType { get; set; }
     }
 }
