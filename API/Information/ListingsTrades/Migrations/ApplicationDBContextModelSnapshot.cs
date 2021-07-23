@@ -4,15 +4,14 @@ using ListingsTrades.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ListingsTrades.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    [Migration("20210716032703_init")]
-    partial class init
+    partial class ApplicationDBContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -62,8 +61,8 @@ namespace ListingsTrades.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("Ends")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<double>("Ends")
+                        .HasColumnType("float");
 
                     b.Property<int>("FeeAccount")
                         .HasColumnType("int");
@@ -80,8 +79,8 @@ namespace ListingsTrades.Migrations
                     b.Property<bool>("NotIn231")
                         .HasColumnType("bit");
 
-                    b.Property<decimal>("PSTRate")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<double>("PSTRate")
+                        .HasColumnType("float");
 
                     b.Property<int>("RevenueAccount_S")
                         .HasColumnType("int");
@@ -89,8 +88,8 @@ namespace ListingsTrades.Migrations
                     b.Property<int>("TaxAccount")
                         .HasColumnType("int");
 
-                    b.Property<decimal>("TaxRate")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<double>("TaxRate")
+                        .HasColumnType("float");
 
                     b.Property<string>("Type")
                         .HasColumnType("nvarchar(max)");
@@ -135,8 +134,9 @@ namespace ListingsTrades.Migrations
                     b.Property<string>("ShortName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("Type")
-                        .HasColumnType("bit");
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(1)");
 
                     b.HasKey("Id");
 
